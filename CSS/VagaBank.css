@@ -1,0 +1,435 @@
+
+:root {
+    --bg: #282a36;
+    --cor-verde: #00CED1; 
+}   
+
+*{
+    padding: 0px;
+    margin: 0px;
+    transition: all 0.2s ease-in-out;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: #FFF;
+    font-size: 62.5%;
+}
+
+.container-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1.6rem;
+}
+
+.container-loading h1 {
+    font-size: 2.6rem;
+}
+
+.container-loading h1 span {
+    color: var(--cor-verde);
+}
+
+.container-loading h3{
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-style: italic;
+    color: hsl(231, 15%, 25%);
+}
+
+.barra {
+    margin-top: 1.8rem;
+    width: 800px;
+    height: 1.6rem;
+    border-radius: 1.6rem;
+    background-color: hsl(233, 16%, 25%);
+}
+
+.barra-interna {
+    height: 100%; 
+    width: 0px;
+    background-color: var(--cor-verde);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 18px hsl(181, 100%, 60%, 0.20);
+    transition: 5s; 
+    position: relative;
+}
+
+.barra-interna::before{
+    position: absolute;
+    content: "";
+    height: 0; width: 0; right: 0;
+    margin-right: 1rem;
+    top: -25px;
+    border: 1rem solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: hsl(231, 20%, 15%, 0.80);
+    /* backdrop-filter: blur(1rem); */
+}
+
+.contador {
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+    font-weight: normal;
+    background-color: hsl(231, 20%, 15%, 0.80);
+    backdrop-filter: blur(1rem);
+    top: -60px;
+    margin-right: 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(233, 16%, 80%);
+} 
+
+.btn-primario, .btn-secundario{
+    padding: 0.8rem 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background-color: var(--cor-verde);
+    border: 1px solid var(--cor-verde);;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: var(--bg);
+}
+
+.btn-secundario{
+    background-color: transparent;
+    color: var(--cor-verde);
+    border: 1px solid var(--cor-verde);
+}
+
+.btn-primario:hover{
+    box-shadow: 8px 8px 0px hsl(181, 100%, 41%, 0.60);
+}
+
+.btn-secundario:hover{
+    box-shadow: 8px 8px 0px hsl(181, 100%, 41%, 0.60);
+}
+
+/* COMEÇO DA TELA DE LOGIN */
+
+.TelaDeLogin {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.TelaDeLogin h1{
+    font-size: 2.6rem;
+}
+
+.TelaDeLogin .foto-De-Perfil {
+    width: 112px;
+    height: 112px;
+    background-image: url(../Imagens/reshot-icon-man-avatar-QCENGDUSPB.svg);
+    background-color: var(--cor-verde);
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid var(--cor-verde);
+    box-shadow: 2px 12px 16px hsl(231, 20%, 10%, 0.36);
+}
+
+.Formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Formulario div{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+}
+
+.Formulario .icon-forms {
+ fill: white;
+}
+
+.Formulario input {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0px 0.3rem 0.3rem 0px;
+    padding: 0.8rem 2rem 0.8rem 1rem;    
+    background-color: hsl(231, 15%, 20%);
+    border: 1px solid hsl(231, 15%, 20%);
+}
+
+.icon-forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-forms i{
+    font-size: 1.4rem;
+    color: var(--cor-verde);
+}
+
+.Formulario div svg{
+   height: 28px;
+   width: 28px;
+   fill: var(--cor-verde);
+}
+
+.Formulario input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.Formulario input:hover {
+    border: 1px solid var(--cor-verde);
+}
+
+
+.Formulario div div {
+    width: 48px;
+    height: 48px;
+    background-color: hsl(231, 15%, 20%);
+    border-radius: 0.2rem 0px 0px 0.2rem;
+}
+
+.Agencia {
+    margin-right: 1.2rem;
+}
+
+.Box-Botoes-Entrada {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* FIM DA TELA DE LOGIN */
+
+/* COMEÇO DA TELA DE CRIAR CONTA */
+
+.CriarUmaConta {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;     
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.CriarUmaConta h1 {
+    font-size: 2.6rem;
+}
+
+.CriarUmaConta .foto-De-Perfil {
+    width: 112px;
+    height: 112px;
+    background-image: url(../Imagens/reshot-icon-man-avatar-QCENGDUSPB.svg);
+    background-color: var(--cor-verde);
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid var(--cor-verde);
+    box-shadow: 2px 12px 16px hsl(231, 20%, 10%, 0.36);
+}
+
+.CriarUmaConta .Formulario input {
+    width: 256px; 
+    border-radius: 0.3rem;
+}
+
+.CriarUmaConta .Formulario div {
+    gap: 1.2rem;
+}
+/* FIM DA TELA DE CRIAR CONTA */
+
+/* COMEÇO DA HOME  */
+
+.home {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
+}
+
+/* Menu home */
+.menu {
+    display: grid;
+    background-color: hsl(181, 100%, 41%, 0.9);
+    grid-template-rows: 1fr 4fr;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   background-color: hsl(181, 100%, 44%);
+   box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+   
+}
+
+.user p {
+    font-size: 1.5rem;
+    font-size: "Poppins", sans-serif;
+    font-weight: 450;
+}
+
+.user .foto-De-Perfil{
+    width: 100px;
+    height: 100px;
+    background-image: url(../Imagens/reshot-icon-man-avatar-QCENGDUSPB.svg);
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+.btn-exit {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn-exit i {
+    font-size: 18px;
+    color: hsl(181, 100%, 44%);
+}
+
+.btn-exit:hover{
+    background-color: hsl(181, 100%, 41%);
+}
+
+.btn-exit:hover > i {
+    color: #fff;
+}
+
+/* Navbar menu*/
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    
+}
+
+.navbar ul li {
+    font-size: 1.3rem;
+    padding: 20px 40px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s;
+    position: relative;
+}
+
+.navbar ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover{
+    margin-left: 5px;
+   
+}
+
+
+.navbar ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: #FFF;
+    width: 0%;
+    height: 3px;
+    right: 0;
+    bottom: -10px;
+    transition: 0.6s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.conteudo h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    color: hsl(181, 100%, 41%);
+}
+
+.conteudo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.conteudo h3 i {
+    color: hsl(181, 100%, 41%);
+    animation: teste 1.5s infinite;
+}
+
+@keyframes teste{
+    0%, 100%{
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* --------  Animations --------*/
+
+[data-home]{
+    display: 1;
+    transition: 2s ease;
+}
+
+
+
+
+
+
+
+
+
+
