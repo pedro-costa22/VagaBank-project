@@ -420,8 +420,12 @@ body {
 /* --------  Animations --------*/
 
 [data-home]{
-    display: 1;
+    opacity: 0;
     transition: 2s ease;
+}
+
+[data-home].animate{
+    opacity: 1;
 }
 
 

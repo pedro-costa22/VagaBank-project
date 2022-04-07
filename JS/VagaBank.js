@@ -41,4 +41,13 @@ const botaoLogar = document.querySelector("#LoginNoSite").addEventListener('clic
     btn.preventDefault()
     TelaDeLogin.style.display = "none";
     home.style.display = "grid";
+    animate.forEach((element) =>{
+        setInterval(() =>{
+            element.classList.add(animationClass)
+        }, 200)
+    }) 
 })
+
+
+const animate = document.querySelectorAll('[data-home]');
+const animationClass = 'animate';
