@@ -83,7 +83,60 @@
     </form>
 </section>
 
+    <!-- Pag home -->
 <section id="home" class="home">
+    <div class="menu">
+
+        <div class="user">
+           <div class="logo">
+                <div class="foto-De-Perfil"></div> 
+                <button class="btn btn-exit">
+                    <i class="fa solid fa-angle-right"></i>
+                </button>
+           </div>
+
+          <p>Olá, Usuário</p>
+        </div>
+        
+
+        <div class="navbar">
+            <ul>
+                <li id="btn-saldo"><a href="#"><i class="fa solid fa-wallet"></i>Consultar Saldo</a></li>
+
+                <li><a href="#"><i class="fa solid fa-receipt"></i>Extrato financeiro</a></li>
+
+                <li><a href="#"><i class="fa solid fa-coins"></i>Transferência</a></li>
+
+                <li><a href="#"><i class="fa solid fa-wallet"></i>Depositar</a></li>
+
+                <li><a href="#"><i class="fa solid fa-coins"></i>Área PIX</a></li>
+
+                <li><a href="#"><i class="fa solid fa-money-check"></i>Efetuar pagamento</a></li>
+
+                <li><a href="#"><i class="fa solid fa-phone"></i>Recarga celular</a></li>
+
+                <li><a href="#"><i class="fa solid fa-comments"></i>Suporte</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="conteudo">
+       
+        <h2 data-home="teste">Bem vindos</h2>
+        <h3 data-home="teste">
+            <i class="fa solid fa-arrow-left"></i>
+            Verifique  as opções disponíveis
+        </h3>
+      
+        <img src="imagens/home.png" data-home="teste">
+    </div>
+</section>
+
+     <!-- Pag saldo -->
+<section id="saldo" class="saldo">
     <div class="menu">
 
         <div class="user">
@@ -122,16 +175,38 @@
     </div>
 
 
-    <div class="conteudo">
+    <div class="conteudo-saldo">
+       <div class="info-saldo" data-saldo="left">
+           <p>Conta</p>
+           <div class="info">
+               <input type="password" class="value value-conta" value="R$ 15.000.00"> 
+               <span><i class="fa solid fa-eye-slash open-value"></i></span>
+            </div>
+
+           <p>Poupança</p>
+           <div class="info">
+            <input type="password" class="value value-poupanca" value="R$ 22.000.00"> 
+            <span><i class="fa solid fa-eye-slash open-value"></i></span>
+
+            
+           </div>
+           <p>Fatura cartão</p>
+           <div class="info">
+            <input type="password" class="value value-fatura" value="R$ 7.600.00"> 
+            <span><i class="fa solid fa-eye-slash open-value"></i></span>
+           </div>
+
+           <p>Investimentos</p>
+           <div class="info">
+            <input type="password" class="value value-investimento" value="R$ 67.000.00"> 
+            <span><i class="fa solid fa-eye-slash open-value"></i></span>
+           </div>
+       </div>
        
-        <h2 data-home="teste">Bem vindos</h2>
-        <h3 data-home="teste">
-            <i class="fa solid fa-arrow-left"></i>
-            Verifique  as opções disponíveis
-        </h3>
       
-        <img src="imagens/home.png" data-home="teste">
+        <img src="imagens/saldo.svg" data-saldo="right">
     </div>
+
 </section>
 
 
@@ -139,7 +214,11 @@
 
 
 
+
+
+
 <script src="JS/VagaBank.js"></script>
+
 </body>
 
 </html>

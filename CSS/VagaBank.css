@@ -270,7 +270,7 @@ body {
 }
 
 /* Menu home */
-.menu {
+.menu{
     display: grid;
     background-color: hsl(181, 100%, 41%, 0.9);
     grid-template-rows: 1fr 4fr;
@@ -299,11 +299,14 @@ body {
 }
 
 .user .foto-De-Perfil{
-    width: 100px;
-    height: 100px;
-    background-image: url(../Imagens/reshot-icon-man-avatar-QCENGDUSPB.svg);
+    width: 80px;
+    height: 80px;
+    background-image: url(../Imagens/user.png);
     background-size: cover;
     margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 50%;
+   
 }
 
 .btn-exit {
@@ -414,6 +417,75 @@ body {
     }
 }
 
+/* FIM DA TELA HOME */
+
+/* INICIO TELA CONSULTA DE SALDO*/
+
+.saldo {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
+}
+
+.conteudo-saldo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info {
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    font-size: 1rem;
+    outline: none;
+    border-radius:  0.3rem;
+    padding: 0.8rem 2rem 0.8rem 1rem;
+    background-color: hsl(231, 15%, 20%);
+    border: 1px solid hsl(231, 15%, 20%);
+    width: 250px;
+    margin: 15px 0;
+}
+
+.value {
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    outline: none;
+    font-size: 1rem;
+    background-color: hsl(231, 15%, 20%);
+    border: 1px solid hsl(231, 15%, 20%);
+    width: 100px; 
+}
+
+.info span {
+    padding-top: 2px;
+    float: right;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.info span:hover {
+    color: hsl(181, 100%, 41%);
+}
+
+.info:hover{
+    border: 1px solid var(--cor-verde);
+}
+
+.info-saldo p {
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.conteudo-saldo img {
+    width: 800px;
+}
+
+.close {
+    display: none;
+}
+
 
 
 
@@ -426,6 +498,25 @@ body {
 
 [data-home].animate{
     opacity: 1;
+}
+
+
+[data-saldo]{
+    opacity: 0;
+    transition: 1s ease;
+}
+
+[data-saldo="left"]{
+    transform: translate3d(-50px, 0px, 0px);
+}
+
+[data-saldo="right"]{
+    transform: translate3d(50px, 0px, 0px);
+}
+
+[data-saldo].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
 }
 
 
