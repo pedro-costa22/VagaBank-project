@@ -103,26 +103,26 @@
             <ul>
                 <li id="btn-saldo"><a href="#"><i class="fa solid fa-wallet"></i>Consultar Saldo</a></li>
 
-                <li><a href="#"><i class="fa solid fa-receipt"></i>Extrato financeiro</a></li>
+                <li id="btn-extrato"><a href="#"><i class="fa solid fa-receipt"></i>Extrato financeiro</a></li>
 
-                <li><a href="#"><i class="fa solid fa-coins"></i>Transferência</a></li>
+                <li id="btn-transf"><a href="#"><i class="fa solid fa-coins"></i>Transferência</a></li>
 
-                <li><a href="#"><i class="fa solid fa-wallet"></i>Depositar</a></li>
+                <li id="btn-depositar"><a href="#"><i class="fa solid fa-wallet"></i>Depositar</a></li>
 
-                <li><a href="#"><i class="fa solid fa-coins"></i>Área PIX</a></li>
+                <li id="btn-pix"><a href="#"><i class="fa solid fa-coins"></i>Área PIX</a></li>
 
-                <li><a href="#"><i class="fa solid fa-money-check"></i>Efetuar pagamento</a></li>
+                <li id="btn-pagamento"><a href="#"><i class="fa solid fa-money-check"></i>Efetuar pagamento</a></li>
 
-                <li><a href="#"><i class="fa solid fa-phone"></i>Recarga celular</a></li>
+                <li id="btn-recarga"><a href="#"><i class="fa solid fa-phone"></i>Recarga celular</a></li>
 
-                <li><a href="#"><i class="fa solid fa-comments"></i>Suporte</a></li>
+                <li id="btn-suporte"><a href="#"><i class="fa solid fa-comments"></i>Suporte</a></li>
 
             </ul>
         </div>
 
     </div>
 
-
+         <!-- Home-->
     <div class="conteudo">
        
         <h2 data-home="teste">Bem vindos</h2>
@@ -133,81 +133,106 @@
       
         <img src="imagens/home.png" data-home="teste">
     </div>
-</section>
 
-     <!-- Pag saldo -->
-<section id="saldo" class="saldo">
-    <div class="menu">
-
-        <div class="user">
-           <div class="logo">
-                <div class="foto-De-Perfil"></div> 
-                <button class="btn btn-exit">
-                    <i class="fa solid fa-angle-right"></i>
-                </button>
-           </div>
-
-          <p>Olá, Usuário</p>
-        </div>
-        
-
-        <div class="navbar">
-            <ul>
-                <li><a href="#"><i class="fa solid fa-wallet"></i>Consultar Saldo</a></li>
-
-                <li><a href="#"><i class="fa solid fa-receipt"></i>Extrato financeiro</a></li>
-
-                <li><a href="#"><i class="fa solid fa-coins"></i>Transferência</a></li>
-
-                <li><a href="#"><i class="fa solid fa-wallet"></i>Depositar</a></li>
-
-                <li><a href="#"><i class="fa solid fa-coins"></i>Área PIX</a></li>
-
-                <li><a href="#"><i class="fa solid fa-money-check"></i>Efetuar pagamento</a></li>
-
-                <li><a href="#"><i class="fa solid fa-phone"></i>Recarga celular</a></li>
-
-                <li><a href="#"><i class="fa solid fa-comments"></i>Suporte</a></li>
-
-            </ul>
-        </div>
-
-    </div>
-
-
-    <div class="conteudo-saldo">
-       <div class="info-saldo" data-saldo="left">
-           <p>Conta</p>
-           <div class="info">
-               <input type="password" class="value value-conta" value="R$ 15.000.00"> 
-               <span><i class="fa solid fa-eye-slash open-value"></i></span>
+         <!-- Saldo -->
+    <div class="conteudo-saldo" >
+            <div class="info-saldo" data-saldo="left">
+                <p>Conta</p>
+                <div class="info">
+                    <input type="password" class="value value-conta" value="R$ 15.000.00"> 
+                    <span><i class="fa solid fa-eye-slash open-value"></i></span>
+     
+                 </div>
+     
+                <p>Poupança</p>
+                <div class="info">
+                 <input type="password" class="value value-poupanca" value="R$ 22.000.00"> 
+                 <span><i class="fa solid fa-eye-slash open-value"></i></span>
+     
+                 
+                </div>
+                <p>Fatura cartão</p>
+                <div class="info">
+                 <input type="password" class="value value-fatura" value="R$ 7.600.00"> 
+                 <span><i class="fa solid fa-eye-slash open-value"></i></span>
+                </div>
+     
+                <p>Investimentos</p>
+                <div class="info">
+                 <input type="password" class="value value-investimento" value="R$ 67.000.00"> 
+                 <span><i class="fa solid fa-eye-slash open-value"></i></span>
+                </div>
             </div>
-
-           <p>Poupança</p>
-           <div class="info">
-            <input type="password" class="value value-poupanca" value="R$ 22.000.00"> 
-            <span><i class="fa solid fa-eye-slash open-value"></i></span>
-
             
-           </div>
-           <p>Fatura cartão</p>
-           <div class="info">
-            <input type="password" class="value value-fatura" value="R$ 7.600.00"> 
-            <span><i class="fa solid fa-eye-slash open-value"></i></span>
-           </div>
+           
+             <img src="imagens/saldo.svg" data-saldo="right">
+    </div> 
 
-           <p>Investimentos</p>
-           <div class="info">
-            <input type="password" class="value value-investimento" value="R$ 67.000.00"> 
-            <span><i class="fa solid fa-eye-slash open-value"></i></span>
-           </div>
-       </div>
-       
+         <!-- Extrato-->
+    <div class="conteudo-extrato">
+                
+             <img src="imagens/extrato.svg" data-extrato="img">
+     
+             <div class="info-saldo">
+                 <p data-extrato="item1">Extrato financeiro</p>
+     
+                 <div class="info left" data-extrato="item1">
+                     <p>Centauro</p> 
+                     <span>R$ -120.00</span>
+                 </div>
       
-        <img src="imagens/saldo.svg" data-saldo="right">
+                 
+                 <div class="info right" data-extrato="item2">
+                      <p>Supermercado</p> 
+                     <span>R$ -15.00</span>
+                 </div>
+                
+                 <div class="info left" data-extrato="item3">
+                     <p>Salário</p> 
+                    <span>R$ +1500.00</span>
+                </div>
+                 
+                <div class="info right" data-extrato="item4">
+                     <p>Nike</p> 
+                     <span>R$ -473.00</span>
+                 </div>
+                 
+                <div class="info left" data-extrato="item5">
+                     <p>Carrefour</p> 
+                     <span> R$ -23.00</span>
+                 </div>
+                 
+                <div class="info right" data-extrato="item6">
+                     <p>Netshoes</p> 
+                     <span>R$ -299.00</span>
+                 </div>
+                 
+                <div class="info left" data-extrato="item7">
+                     <p>Roldão</p> 
+                     <span>R$ -99.00</span>
+                 </div>
+                 
+                <div class="info right" data-extrato="item8">
+                     <p>Blaze</p> 
+                     <span>R$ +220.00</span>
+                 </div>
+                 
+                <div class="info left" data-extrato="item9">
+                     <p>Bet365</p> 
+                     <span>R$ +138.00</span>
+                 </div>
+             </div>
     </div>
 
-</section>
+
+  
+
+
+</section> 
+
+    
+
+   
 
 
 

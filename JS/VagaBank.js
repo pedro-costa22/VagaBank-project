@@ -51,19 +51,36 @@ const botaoLogar = document.querySelector("#LoginNoSite").addEventListener('clic
 
 
 const btnSaldo = document.querySelector("#btn-saldo").addEventListener("click", () =>{
-    home.style.display = "none";
-    saldo.style.display = "grid";
+    conteudoHome.style.display = "none";
+    conteudoSaldo.style.display = "flex";
+    conteudoExtrato.style.display = "none";
 
+   
     animateSaldo.forEach((element) =>{
         timerAnimation(element)
     })
 
 });
+const btnExtrato = document.querySelector("#btn-extrato").addEventListener("click", () =>{
+    conteudoSaldo.style.display = "none";
+    conteudoExtrato.style.display = "flex";
+
+    animateExtrato.forEach((element) =>{
+        timerAnimation(element)
+    })
+   
+})
 
 
+const conteudoExtrato = document.querySelector(".conteudo-extrato");
+const conteudoSaldo = document.querySelector(".conteudo-saldo");
+const conteudoHome = document.querySelector(".conteudo");
+
+const menu = document.querySelector(".menu");
 
 const animate = document.querySelectorAll('[data-home]');
 const animateSaldo = document.querySelectorAll('[data-saldo');
+const animateExtrato = document.querySelectorAll('[data-extrato]');
 const animationClass = 'animate';
 
 function timerAnimation(element){
