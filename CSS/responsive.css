@@ -15,8 +15,6 @@
      /*--- register --- */
   
 
-
-
      /*--- Home --- */
 
      .home {
@@ -133,8 +131,6 @@
         margin: 15px auto;
     }
 
-
-
     .campos {
         width: 100%;
         justify-content: center;
@@ -143,6 +139,71 @@
     .conta, .agencia, .valor, .titular, .documento{
         width: 250px
     }
+
+    /*--- Pix --- */
+    .conteudo-pix {
+        padding: 1em;
+    }
+    .conteudo-pix .btn-info {
+        font-size: 0.8rem;
+    }
+    .conteudo-pix img{
+        display: none;
+     }
+ 
+ 
+     /*--- Pagamento --- */
+     .conteudo-efePagamento .info-efePagamento {
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .conteudo-efePagamento img {
+         width: 300px;
+     }
+ 
+     .conteudo-efePagamento h2 {
+         margin-top: 6%;
+     }
+ 
+ 
+     /*--- Recarga --- */
+     .conteudo-recCel {
+         flex-direction: column;
+         justify-content: center;
+         padding: 0;
+     }
+ 
+     .conteudo-recCel img{
+         width: 300px; 
+     }
+ 
+ 
+     /*--- Suporte --- */
+     .conteudo-suporte .input-info-txt {
+        width: 86%;
+     }
+     .conteudo-suporte {
+         padding: 0;
+     }
+     .conteudo-suporte .div-btn-one-columns {
+         align-items: flex-start;
+     }
+     .conteudo-suporte .input-info{
+        width:80%;
+     }
+
+     .conteudo-suporte img{
+         display: none;
+     }
+
+     .form-suporte {
+        margin: 0 auto;
+     }
+
+     .conteudo-suporte .btn-info{
+         width: 91%;
+     }
 
 }
 
@@ -239,6 +300,43 @@
     .conteudo-depositar img {
         width: 350px;
         margin-bottom: 30px;
+    }
+
+    /*--- Pix --- */
+    .conteudo-pix img{
+       display: none;
+    }
+
+
+    /*--- Pagamento --- */
+    .conteudo-efePagamento .info-efePagamento {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .conteudo-efePagamento img {
+        width: 400px;
+    }
+
+    .conteudo-efePagamento h2 {
+        margin-top: 6%;
+    }
+
+
+    /*--- Recarga --- */
+    .conteudo-recCel {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .conteudo-recCel img{
+        width: 400px; 
+    }
+
+
+    /*--- Suporte --- */
+    .conteudo-suporte img{
+        display: none;
     }
         
 }
@@ -371,6 +469,48 @@
         margin-bottom: 30px;
     }
 
+    /*--- Pix --- */
+
+    .conteudo-pix {
+        flex-direction: column;
+    }
+    .conteudo-pix img{
+        width: 320px; 
+    }
+
+
+    /*--- Pagamento --- */
+    .conteudo-efePagamento .info-efePagamento {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .conteudo-efePagamento img {
+        width: 400px;
+    }
+
+    .conteudo-efePagamento h2 {
+        margin-top: 6%;
+    }
+
+
+    /*--- Recarga --- */
+    .conteudo-recCel {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .conteudo-recCel img{
+        width: 400px; 
+    }
+
+
+    /*--- Suporte --- */
+    .conteudo-suporte img{
+        display: none; 
+       
+    }
+
     
 }
 
@@ -470,13 +610,9 @@
     }
 
     /*--- Extrato --- */
-
-  
    .conteudo-extrato img {
         width: 400px;
     }
-
-    
 
     .conteudo-extrato .info {
         margin: 15px 0;
@@ -494,14 +630,49 @@
     }
 
     /*--- Deposito --- */
-
     .conteudo-depositar img {
         width: 350px;
         margin-bottom: 30px;
     }
+
+    /*--- Pix --- */
+     .conteudo-pix img{
+        width: 320px; 
+    }
+
+
+    /*--- Pagamento --- */
+    .conteudo-efePagamento .info-efePagamento {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .conteudo-efePagamento img {
+        width: 400px;
+    }
+
+    .conteudo-efePagamento h2 {
+        margin-top: 6%;
+    }
+
+
+    /*--- Recarga --- */
+    .conteudo-recCel {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .conteudo-recCel img{
+        width: 400px; 
+    }
+
+
+    /*--- Suporte --- */
+    .conteudo-suporte img{
+        width: 300px; 
+       
+    }
   
-  
-   
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1480px){
@@ -569,6 +740,29 @@
 
     .conteudo-depositar img {
         width: 450px;
+    }
+
+    /*--- Pix --- */
+    .conteudo-pix img{
+        width: 400px; 
+    }
+
+
+    /*--- Pagamento --- */
+    .conteudo-efePagamento img {
+        width: 500px;
+    }
+
+
+    /*--- Recarga --- */
+    .conteudo-recCel img{
+        width: 450px; 
+    }
+
+
+    /*--- Suporte --- */
+    .conteudo-suporte img{
+        width: 400px; 
     }
   
     

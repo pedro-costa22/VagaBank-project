@@ -13,7 +13,8 @@
 
     <!--Styles-->
     <link rel="stylesheet" href="CSS/VagaBank.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="CSS/animation.css">
 
     
     <title>VagaBank</title>
@@ -391,7 +392,7 @@
         <img src="imagens/transfer.svg" data-transf="img">
     </div>
 
-    <!-- depositar-->
+        <!-- depositar-->
     <div class="conteudo-depositar">
     
         <img src="imagens/deposito.svg" data-deposito="img">
@@ -464,7 +465,112 @@
            
     </div>
 
-</div>
+    </div>
+
+        <!-- Area PIX-->
+    <div class="conteudo-pix">
+                
+        
+        <div class="info-pix" data-pix="items">
+            <h2>Area PIX</h2>
+
+                <div class="div-info-two-columns">
+                    <button type="text" class="btn-info">Transferir</button>
+                    <button type="text" class="btn-info">Pix copiar e colar</button>
+                    <button type="text" class="btn-info">Ler QR code</button>
+                    <button type="text" class="btn-info">Cobrar</button>
+                 </div>
+                 <div class="div-info-one-columns">
+                    <button type="text" class="btn-info-big "><i class="fa fa-solid fa-user icone">&nbsp;&nbsp;</i>Depositar</button>
+                    <button type="text" class="btn-info-big">Registrar ou trazer chaves</button>
+                    <button type="text" class="btn-info-big">Configurar PIX</button>
+                 </div>
+     
+                
+        </div>
+        <img src="imagens/pix.svg" data-pix="img">
+    </div>
+
+        <!-- Efetuar Pagamento-->
+    <div class="conteudo-efePagamento">        
+        
+            <div class="info-efePagamento">
+                
+    
+                <img src="imagens/pagamento.svg" data-efePagamento="img">
+    
+                    <div class="div-info-one-columns">
+    
+                        <h2 data-efePagamento="item1">Efetuar Pagamento</h2>
+                        <button type="text" class="btn-info-big" data-efePagamento="item1">Depositar</button>
+                        <button type="text" class="btn-info-big" data-efePagamento="item2">Registrar ou trazer chaves</button>
+                        <button type="text" class="btn-info-big" data-efePagamento="item3">Configurar PIX</button>
+    
+                    </div>  
+    
+            </div>
+            
+    </div>
+
+        <!-- Recarga Celular-->
+    <div class="conteudo-recCel">
+        
+        
+        <div class="info-recCel">
+            <h2 data-cel="item1">Recarga de Celular</h2>
+
+                <div class="div-info-one-columns" data-cel="item1">
+                    <select name="select" class="slc-info-big">
+                        <option value="valor1">CLARO</option>
+                        <option value="valor2">TIM</option>
+                        <option value="valor3">OI</option>
+                        <option value="valor4">VIVO</option>
+                        <option value="0" selected >Operadora</option>
+                    </select>
+                </div>
+
+                <div class="div-info-two-columns" data-cel="item2">
+                    <input type="text" class="input-info" placeholder="Valor">
+                    <input type="text" class="input-info" placeholder="Número">
+                    
+                </div>
+                
+                <div class="div-info-one-columns" data-cel="item3">
+                    <button type="submit" class="btn-info-big"><b>Efetuar Recarga</b></button>
+                </div>   
+        </div>
+        <img src="imagens/recarga.svg" data-cel="img">
+    </div>
+
+        <!-- Suporte -->
+    <div class="conteudo-suporte">
+
+        <img src="imagens/suporte.svg" data-sup="img">
+        
+        <div class="info-suporte">
+            <h2 data-sup="item1">Entre em contato</h2>
+                
+                <div class="div-info-one-columns">
+                    <form action="#" method="#" class="form-suporte">
+                        <h3 data-sup="item1">Nome&nbsp;&nbsp;<i class="fa fa-solid fa-user icone"></i></h3>
+                        <input type="text" class="input-info" placeholder="Informe seu nome" data-sup="item1">
+
+                        <h3 data-sup="item2" >Email&nbsp;&nbsp;<i class="fa fa-solid fa-envelope icone"></i></h3>
+                        <input type="text" class="input-info" placeholder="informe seu email" data-sup="item2">
+
+                        <h3 data-sup="item3">Assunto&nbsp;&nbsp;<i class="fa fa-solid fa-comment icone"></i></h3>
+                        <input type="text" class="input-info" placeholder="Informe o Assunto a ser tratado" data-sup="item3">
+
+                        <h3 data-sup="item4">Comentario&nbsp;&nbsp;<i  class="fa fa-solid fa-comment icone"></i></h3>
+                        <textarea class="input-info-txt" name="comentario" id="comentario" cols="30" rows="5" placeholder="Escreva a mensagem..." data-sup="item4"></textarea>
+                    <div class="div-btn-one-columns" data-sup="item5">
+                        <button type="submit" class="btn-info" >Enviar mensagem</button>
+                    </div>
+                    </form>
+                </div>     
+        </div>
+       
+    </div>
   
 
 

@@ -51,11 +51,15 @@ const botaoLogar = document.querySelector("#LoginNoSite").addEventListener('clic
 
 
 const btnSaldo = document.querySelector("#btn-saldo").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
     conteudoHome.style.display = "none";
     conteudoSaldo.style.display = "flex";
     conteudoExtrato.style.display = "none";
     conteudoTransfer.style.display = "none";
-    conteudoDepositar.style.display = "none"
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "none";
 
    
     animateSaldo.forEach((element) =>{
@@ -64,11 +68,15 @@ const btnSaldo = document.querySelector("#btn-saldo").addEventListener("click", 
 
 });
 const btnExtrato = document.querySelector("#btn-extrato").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
+    conteudoHome.style.display = "none";
     conteudoSaldo.style.display = "none";
-    conteudoHome.style.display = "none"
-    conteudoTransfer.style.display = "none";
     conteudoExtrato.style.display = "flex";
-    conteudoDepositar.style.display = "none"
+    conteudoTransfer.style.display = "none";
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "none";
 
     animateExtrato.forEach((element) =>{
         timerAnimation(element)
@@ -77,11 +85,15 @@ const btnExtrato = document.querySelector("#btn-extrato").addEventListener("clic
 })
 
 const btnTransfer = document.querySelector("#btn-transfer").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
+    conteudoHome.style.display = "none";
     conteudoSaldo.style.display = "none";
-    conteudoHome.style.display = "none"
     conteudoExtrato.style.display = "none";
     conteudoTransfer.style.display = "flex";
-    conteudoDepositar.style.display = "none"
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "none";
 
     animateTransf.forEach((element) =>{
         timerAnimation(element)
@@ -89,18 +101,101 @@ const btnTransfer = document.querySelector("#btn-transfer").addEventListener("cl
 })
 
 const btnDeposito = document.querySelector("#btn-depositar").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "flex";
+    conteudoHome.style.display = "none";
     conteudoSaldo.style.display = "none";
-    conteudoHome.style.display = "none"
     conteudoExtrato.style.display = "none";
     conteudoTransfer.style.display = "none";
-    conteudoDepositar.style.display = "flex"
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "none";
 
     animateDeposito.forEach((element) =>{
         timerAnimation(element)
     })
-})
+});
+
+// Area PIX
+const btnpix = document.querySelector("#btn-pix").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
+    conteudoHome.style.display = "none";
+    conteudoSaldo.style.display = "none";
+    conteudoExtrato.style.display = "none";
+    conteudoTransfer.style.display = "none";
+    conteudopix.style.display = "flex";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "none"; 
+  
+
+    animatePix.forEach((element) =>{
+        timerAnimation(element)
+    })
+   
+});
+
+const btnEfePagamento = document.querySelector("#btn-pagamento").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
+    conteudoHome.style.display = "none";
+    conteudoSaldo.style.display = "none";
+    conteudoExtrato.style.display = "none";
+    conteudoTransfer.style.display = "none";
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "flex";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "none"; 
+
+    animatePag.forEach((element) =>{
+        timerAnimation(element)
+    })
+   
+});
+
+//Recarca Celular btn-recarga
+const btnRecCel = document.querySelector("#btn-recarga").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
+    conteudoHome.style.display = "none";
+    conteudoSaldo.style.display = "none";
+    conteudoExtrato.style.display = "none";
+    conteudoTransfer.style.display = "none";
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "flex";
+    conteudoSuporte.style.display = "none"; 
 
 
+    animateCel.forEach((element) =>{
+        timerAnimation(element)
+    })
+
+    
+   
+});
+
+//Suporte btn-suporte
+const btnSuporte = document.querySelector("#btn-suporte").addEventListener("click", () =>{
+    conteudoDepositar.style.display = "none";
+    conteudoHome.style.display = "none";
+    conteudoSaldo.style.display = "none";
+    conteudoExtrato.style.display = "none";
+    conteudoTransfer.style.display = "none";
+    conteudopix.style.display = "none";
+    conteudoEfePagamento.style.display = "none";
+    conteudoRecCel.style.display = "none";
+    conteudoSuporte.style.display = "flex"; 
+
+    animateSup.forEach((element) =>{
+        timerAnimation(element)
+    })
+
+});
+
+
+const conteudoSuporte = document.querySelector(".conteudo-suporte");
+const conteudoRecCel = document.querySelector(".conteudo-recCel");
+const conteudoEfePagamento = document.querySelector(".conteudo-efePagamento");
+const conteudopix = document.querySelector(".conteudo-pix");
 const conteudoExtrato = document.querySelector(".conteudo-extrato");
 const conteudoSaldo = document.querySelector(".conteudo-saldo");
 const conteudoHome = document.querySelector(".conteudo");
@@ -115,9 +210,13 @@ const animateExtrato = document.querySelectorAll('[data-extrato]');
 const animateTransf = document.querySelectorAll('[data-transf]');
 const animateDeposito = document.querySelectorAll('[data-deposito]');
 const animationClass = 'animate';
+const animatePag = document.querySelectorAll('[data-efePagamento]');
+const animatePix = document.querySelectorAll('[data-pix]');
+const animateCel = document.querySelectorAll('[data-cel]');
+const animateSup = document.querySelectorAll('[data-sup]');
 
 
-function timerAnimation(element){
+ function timerAnimation(element){
     setInterval(() =>{
         element.classList.add(animationClass)
     }, 200)
