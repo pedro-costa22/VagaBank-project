@@ -154,15 +154,25 @@ body {
     gap: 1rem;
 }
 
-.Formulario div{
+.box-forms{
     display: flex;
     flex-direction: row;
-    text-align: left;
-    justify-content: space-around;
+    /* align-items: baseline;
+    justify-content: center; */
+}
+
+.box-input{
+    display: flex;
+    flex-direction: row;
+    height: 48px;
 }
 
 .Formulario .icon-forms {
- fill: white;
+    fill: white;
+    width: 48px;
+    height: 48px;
+    background-color: hsl(231, 15%, 20%);
+    border-radius: 0.2rem 0px 0px 0.2rem;
 }
 
 .Formulario input {
@@ -203,14 +213,6 @@ body {
     border: 1px solid var(--cor-verde);
 }
 
-
-.Formulario div div {
-    width: 48px;
-    height: 48px;
-    background-color: hsl(231, 15%, 20%);
-    border-radius: 0.2rem 0px 0px 0.2rem;
-}
-
 .Agencia {
     margin-right: 1.2rem;
 }
@@ -235,6 +237,10 @@ body {
     gap: 1.2rem;
 }
 
+.CriarUmaConta .Formulario {
+    max-width: 1200px;
+}
+
 .CriarUmaConta h1 {
     font-size: 2.6rem;
 }
@@ -251,12 +257,16 @@ body {
 }
 
 .CriarUmaConta .Formulario input {
-    width: 256px; 
+    min-width: 248px; 
     border-radius: 0.3rem;
+    cursor: pointer;
 }
 
-.CriarUmaConta .Formulario div {
-    gap: 1.2rem;
+.Box-Formulario-CriarConta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 /* FIM DA TELA DE CRIAR CONTA */
 
