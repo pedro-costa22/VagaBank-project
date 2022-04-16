@@ -9,6 +9,16 @@
 }
 
 
+@keyframes global-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
 
 
 /* Animations saldo*/
@@ -26,12 +36,11 @@
 }
 
 [data-saldo].animate{
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
-
-
-
 
 /* Animations extrato*/
 [data-extrato] {
@@ -52,8 +61,10 @@
 }
 
 [data-extrato].animate{
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 
@@ -82,8 +93,10 @@
 }
 
 [data-transf].animate {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 
@@ -119,8 +132,10 @@
 }
 
 [data-deposito].animate{
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 
@@ -140,8 +155,10 @@
 }
 
 [data-pix].animate {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 
@@ -169,8 +186,10 @@
 }
 
 [data-efePagamento].animate {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 
@@ -197,8 +216,10 @@
 }
 
 [data-cel].animate {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 
@@ -235,6 +256,8 @@
 }
 
 [data-sup].animate{
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    animation-name: global-animation;
+    animation-duration: 0.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }

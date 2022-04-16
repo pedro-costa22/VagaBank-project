@@ -1,22 +1,11 @@
 import {conteudoTelas} from "./alterandoTelas.js";
-import {clearScreen} from "./alterandoTelas.js"
+import {clearScreen} from "./alterandoTelas.js";
 import {dataAnimation} from "./animationTelas.js";
 import {timerAnimation} from "./animationTelas.js";
 
 
-const btnSaldoT = document.querySelector('#btn-saldoT');
-const btnExtratoT = document.querySelector('#btn-extratoT');
-const btnTransferT = document.querySelector('#btn-transferT');
-const btnDepositoT = document.querySelector('#btn-depositarT');
-const btnPixT = document.querySelector('#btn-pixT');
-const btnPagamentoT = document.querySelector('#btn-pagamentoT');
-const btnRecargaT = document.querySelector('#btn-recargaT');
-const btnSuporteT = document.querySelector('#btn-suporteT');
-const icones = document.querySelectorAll(".icon");
 
-
-
-btnSaldoT.addEventListener("click", () =>{
+const btnSaldo = document.querySelector("#btn-saldo").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[1].style.display = "flex";
   
@@ -24,18 +13,18 @@ btnSaldoT.addEventListener("click", () =>{
         timerAnimation(element)
     })
 
-})
-
-btnExtratoT.addEventListener("click", () =>{
+});
+const btnExtrato = document.querySelector("#btn-extrato").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[2].style.display = "flex";
  
     dataAnimation[2].forEach((element) =>{
         timerAnimation(element)
     })
+   
 })
 
-btnTransferT.addEventListener("click", () =>{
+const btnTransfer = document.querySelector("#btn-transfer").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[3].style.display = "flex";
     
@@ -45,7 +34,7 @@ btnTransferT.addEventListener("click", () =>{
     })
 })
 
-btnDepositoT.addEventListener("click", () =>{
+const btnDeposito = document.querySelector("#btn-depositar").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[4].style.display = "flex";
     
@@ -54,40 +43,57 @@ btnDepositoT.addEventListener("click", () =>{
     })
 });
 
-btnPixT.addEventListener("click", () =>{
+// Area PIX
+const btnpix = document.querySelector("#btn-pix").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[5].style.display = "flex";
   
     dataAnimation[5].forEach((element) =>{
         timerAnimation(element)
     })
-
+   
 });
 
-btnPagamentoT.addEventListener("click", () =>{
+const btnEfePagamento = document.querySelector("#btn-pagamento").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[6].style.display = "flex";
   
     dataAnimation[6].forEach((element) =>{
         timerAnimation(element)
     })
-})
+   
+});
 
-btnRecargaT.addEventListener("click", () =>{
+//Recarca Celular btn-recarga
+const btnRecCel = document.querySelector("#btn-recarga").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[7].style.display = "flex";
    
     dataAnimation[7].forEach((element) =>{
         timerAnimation(element)
     })
+ 
 });
 
-btnSuporteT.addEventListener("click", () =>{
+//Suporte btn-suporte
+const btnSuporte = document.querySelector("#btn-suporte").addEventListener("click", () =>{
     clearScreen()
     conteudoTelas[8].style.display = "flex"; 
     
     dataAnimation[8].forEach((element) =>{
         timerAnimation(element)
     })
-})
 
+}); 
+
+
+
+//Menu mobile
+const navbar = document.querySelector(".menu");
+const menuMobile = document.querySelector(".menu-mobile");
+
+
+menuMobile.addEventListener("click", () =>{
+    navbar.classList.toggle('mobileOpen');
+    menuMobile.classList.toggle('fa-times')
+})
