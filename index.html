@@ -80,16 +80,16 @@
     <div class="foto-De-Perfil"></div>
     <form class="Formulario" action="">
         <div class="Box-Formulario-CriarConta">
-            <input id="Nome" class="Nome" type="text" placeholder="Digite o seu nome" onclick="AtivandoOModal('CriarUmaConta', 'Sucesso')">
-            <input id="Email" type="email" placeholder="Digite o seu e-mail">
-            <input id="CPF" class="CPF" type="number" placeholder="Digite o seu CPF" minlength="11" maxlength="11">
-            <input id="CEP" class="CEP" type="number" placeholder="Digite o seu CEP" minlength="8" maxlength="8">
-            <input id="SenhaCadastro" type="password" placeholder="Crie uma senha">
-            <input id="SenhaCadastro" type="password" placeholder="Confirme sua senha">
+            <input id="Nome" class="Nome" name="name" type="text" placeholder="Digite o seu nome">
+            <input id="Email" type="email" name="email" placeholder="Digite o seu e-mail">
+            <input id="CPF" class="CPF" name="cpf" type="number" placeholder="Digite o seu CPF" minlength="11" maxlength="11">
+            <input id="CEP" class="CEP" name="cep" type="number" placeholder="Digite o seu CEP" minlength="8" maxlength="8">
+            <input id="SenhaCadastro" name="senha" type="password" placeholder="Crie uma senha">
+            <input id="SenhaCadastro" name="confSenha" type="password" placeholder="Confirme sua senha">
         </div>
     <div class="Box-Botoes-Entrada">
-        <button id="LoginNoSite" class="btn-primario"> Criar uma conta</button>
-    </div>   
+        <button name="btnRegistro" class="btn-primario"> Criar uma conta</button>
+    </div>
     </form>
 </section>
 
@@ -340,9 +340,9 @@
     
         <div class="form-transf">
             <p data-transf="select1">Realizar Transferência</p>
-            <div class="info" data-transf="select1">
-                <select name="select" class="select">
-                    <option>Instituição</option>
+            <div id="Instituicoes-Div-Transferencia" class="info" data-transf="select1">
+                <select id="Instituicoes-Transferencia" name="select" class="select">
+                    <option value="0">Instituição</option>
                     <option value="valo1" class="select-items">Itaú</option>
                     <option value="valo2" class="select-items">Banco do Brasil</option>
                     <option value="valo3" class="select-items">Caixa Econômica Federal</option>
@@ -357,9 +357,9 @@
                 </select>
              </div>
 
-             <div class="info" data-transf="select2">
-                <select name="select" class="select">
-                    <option>Tipo de conta</option>
+             <div id="TipoDeConta-Div-Transferencia" class="info" data-transf="select2">
+                <select id="TipoDeConta-Trasnferencia" name="select" class="select">
+                    <option value="0">Tipo de conta</option>
                     <option value="valo1" class="select-items">Conta corrente</option>
                     <option value="valo2" class="select-items">Conta poupança</option>
                     <option value="valor3" class="select-items">Conta salário</option>
@@ -372,22 +372,22 @@
              <div class="campos" data-transf="campos">
                  <div class="conta">
                     <i class="fa solid fa-user"></i>
-                    <input type="text" placeholder="Agência">
+                    <input id="Agencia-Transferencia" type="text" placeholder="Agência">
                  </div>
 
                  <div class="agencia">
                     <i class="fa solid fa-user"></i>
-                    <input type="text" placeholder="Conta">
+                    <input id="Conta-Transferencia" type="text" placeholder="Conta">
                 </div> 
 
                 
                 <div class="valor">
                     <i class="fa solid fa-coins"></i>
-                    <input type="text" placeholder="Valor">
+                    <input id="Valor-Transferencia" type="text" placeholder="Valor">
                 </div>
 
                 <div class="enviar">
-                    <button class="btn btn-enviar">Enviar</button>
+                    <button id="EnviarTransferencia" class="btn btn-enviar">Enviar</button>
                 </div>
              </div>
         </div>
@@ -404,9 +404,9 @@
         <div class="form-deposito">
             <p data-deposito="select1">Realizar deposito</p>
 
-           <div class="info" data-deposito="select1">
-            <select class="select">
-                    <option>Instituição</option>
+           <div id="Instituicoes-Div-Deposito" class="info" data-deposito="select1">
+            <select id="Instituicoes-Deposito" class="select">
+                    <option value="0">Instituição</option>
                     <option value="valo1" class="select-items">Itaú</option>
                     <option value="valo2" class="select-items">Banco do Brasil</option>
                     <option value="valo3" class="select-items">Caixa Econômica Federal</option>
@@ -421,9 +421,9 @@
             </select>
            </div>
 
-           <div class="info" data-deposito="select2">
-            <select name="select" class="select">
-                <option>Tipo de conta</option>
+           <div id="TipoDeConta-Div-Deposito" class="info" data-deposito="select2">
+            <select id="TipoDeConta-Deposito" name="select" class="select">
+                <option value="0">Tipo de conta</option>
                 <option value="valo1" class="select-items">Conta corrente</option>
                 <option value="valo2" class="select-items">Conta poupança</option>
                 <option value="valor3" class="select-items">Conta salário</option>
@@ -437,31 +437,31 @@
 
             <div class="agencia" data-deposito="item1">
                 <i class="fa solid fa-user"></i>
-                <input type="text" placeholder="Conta">
+                <input id="Conta-Deposito" type="text" placeholder="Conta">
             </div> 
 
             <div class="conta" data-deposito="item1">
                <i class="fa solid fa-user"></i>
-               <input type="text" placeholder="Agência">
+               <input id="Agencia-Deposito" type="text" placeholder="Agência">
             </div>
 
             <div class="titular" data-deposito="item2">
                 <i class="fa solid fa-user"></i>
-                <input type="text" placeholder="Titular">
+                <input id="Titular-Deposito" type="text" placeholder="Titular">
              </div>
 
              <div class="documento" data-deposito="item2">
                 <i class="fa solid fa-user"></i>
-                <input type="text" placeholder="CPF/CNPJ">
+                <input id="CPFeCNPJ-Deposito" type="text" placeholder="CPF/CNPJ">
              </div>
 
            <div class="valor" data-deposito="item3">
                <i class="fa solid fa-coins"></i>
-               <input type="text" placeholder="Valor">
+               <input id="Valor-Deposito" type="text" placeholder="Valor">
            </div>
 
            <div class="enviar" data-deposito="item3">
-               <button class="btn btn-enviar">Enviar</button>
+               <button id="EnviarDeposito" class="btn btn-enviar">Enviar</button>
            </div>
         </div>
 
@@ -522,8 +522,8 @@
         <div class="info-recCel">
             <h2 data-cel="item1">Recarga de Celular</h2>
 
-                <div class="div-info-one-columns" data-cel="item1">
-                    <select name="select" class="slc-info-big">
+                <div id="Div-select-Operadora" class="div-info-one-columns" data-cel="item1">
+                    <select id="Select-Operadora" name="select" class="slc-info-big">
                         <option value="valor1">CLARO</option>
                         <option value="valor2">TIM</option>
                         <option value="valor3">OI</option>
@@ -533,13 +533,13 @@
                 </div>
 
                 <div class="div-info-two-columns" data-cel="item2">
-                    <input type="text" class="input-info" placeholder="Valor">
-                    <input type="text" class="input-info" placeholder="Número">
+                    <input id="Operadora-Valor" type="text" class="input-info" placeholder="Valor">
+                    <input id="Operadora-Numero"type="text" class="input-info" placeholder="Número">
                     
                 </div>
                 
                 <div class="div-info-one-columns" data-cel="item3">
-                    <button type="submit" class="btn-info-big"><b>Efetuar Recarga</b></button>
+                    <button id="EfetuarRecarga" type="submit" class="btn-info-big"><b>Efetuar Recarga</b></button>
                 </div>   
         </div>
         <img src="imagens/recarga.svg" data-cel="img">
@@ -556,18 +556,18 @@
                 <div class="div-info-one-columns">
                     <form action="#" method="#" class="form-suporte">
                         <h3 data-sup="item1">Nome&nbsp;&nbsp;<i class="fa fa-solid fa-user icone"></i></h3>
-                        <input type="text" class="input-info" placeholder="Informe seu nome" data-sup="item1">
+                        <input id="Nome-Suporte" type="text" class="input-info" placeholder="Informe seu nome" data-sup="item1">
 
                         <h3 data-sup="item2" >Email&nbsp;&nbsp;<i class="fa fa-solid fa-envelope icone"></i></h3>
-                        <input type="text" class="input-info" placeholder="informe seu email" data-sup="item2">
+                        <input id="Email-Suporte" type="text" class="input-info" placeholder="informe seu email" data-sup="item2">
 
                         <h3 data-sup="item3">Assunto&nbsp;&nbsp;<i class="fa fa-solid fa-comment icone"></i></h3>
-                        <input type="text" class="input-info" placeholder="Informe o Assunto a ser tratado" data-sup="item3">
+                        <input id="Assunto-Suporte" type="text" class="input-info" placeholder="Informe o Assunto a ser tratado" data-sup="item3">
 
                         <h3 data-sup="item4">Comentario&nbsp;&nbsp;<i  class="fa fa-solid fa-comment icone"></i></h3>
                         <textarea class="input-info-txt" name="comentario" id="comentario" cols="30" rows="5" placeholder="Escreva a mensagem..." data-sup="item4"></textarea>
                     <div class="div-btn-one-columns" data-sup="item5">
-                        <button type="submit" class="btn-info" >Enviar mensagem</button>
+                        <button id="EnviarMensagemDeSuporte" type="submit" class="btn-info" >Enviar mensagem</button>
                     </div>
                     </form>
                 </div>     
@@ -580,9 +580,9 @@
 <script type ="module" src="JS/menuTablet.js"></script>
 <script type="module" src="JS/buttons.js"></script>
 <script src="JS/ErroDeFormulario.js"></script>
-<script src="JS/ModalGeral.js"></script>
 <script src="JS/saldo.js"></script>
 <script src="JS/extrato.js"></script>
+<script type="module" src="JS/ErroDeFormulario.js"></script>
 
 </body>
 

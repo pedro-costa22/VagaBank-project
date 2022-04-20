@@ -19,7 +19,7 @@
 
     padding: 1rem 1rem;
     position: absolute;
-    max-width: 540px;
+    min-width: 540px;
     background-color: var(--bg-claro);
     z-index: 100 !important;
     top: 0;
@@ -38,23 +38,14 @@
     right: 0;
 }
 
-/* 
-.Modal-Sucesso.Sumir {
-    animation: ModalSumir !important;
-    animation-duration: 0.4s;
-} */
-
-
-
-/* @keyframes ModalSumir {
-    to {
-        opacity: 0;
-        transform: translateX(150%);
-    }
-} */
+.Modal-Erro.Aparecer {
+    transition: 0.6s;
+    opacity: 1;
+    right: 0;
+}
 
 .Modal-Sucesso div {
-    background-image: url(/VagaBank-project-main/Imagens/Sucesso\Icon.png);
+    background-image: url(/Imagens/Vector.png);
     background-size: contain;
     background-position: center;
     width: 1.8rem; height: 1.8rem;
@@ -80,7 +71,7 @@
 
     padding: 1rem 1.2rem;
     position: absolute;
-    max-width: 540px;
+    min-width: 540px;
     background-color: #F26361;
     z-index: 100000000 !important;
     top: 0;
@@ -91,7 +82,7 @@
 }
 
 .Modal-Erro div{
-    background-image: url(/VagaBank-project-main/Imagens/Erro\ icon.png);
+    background-image: url(/Imagens/window-close.png);
     background-size: contain;
     background-position: center;
     width: 1.8rem; height: 1.4rem;
@@ -102,4 +93,20 @@
 
 .Modal-Erro p{
     color: var(--bg) ;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+.Modal-Sucesso, .Modal-Erro {
+    max-width: 240px;
+}
+
+}
+
+@media screen and (max-width: 576px){
+.Modal-Sucesso, .Modal-Erro {
+    max-width: 320px;
+    min-width: 92px;
+}
+
 }

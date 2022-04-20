@@ -1,38 +1,52 @@
-function AtivandoOModal(ElementoPai, Status) {
+export default function AtivandoOModal(ElementoPai, Status, Descricao) {
     const ElementoPaiDeReferencia = document.getElementById(`${ElementoPai}`)
-    
-    if (Status === "Sucesso") { ExibindoOModalSucesso(ElementoPaiDeReferencia) }
-    if (Status === "Erro") {
-        alert("Deu certo o Status")
-    }
+    ExibindoOModalSucesso(ElementoPaiDeReferencia, Status, Descricao) 
 }
 
-function ExibindoOModalSucesso (ElementoPaiDeReferencia) {
-    const ReferemciaDeCriacao = ElementoPaiDeReferencia;
+function ExibindoOModalSucesso (ElementoPaiDeReferencia, Status, Descricao) {
     const ElementoCriado = document.createElement('div'); 
     ElementoCriado.innerHTML = `<div class="Modal-Icon"></div>
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero et ex cupiditate exercitationem</p>`
+    <p>${Descricao}</p>`
 
-    ElementoCriado.setAttribute('class', 'Modal-Sucesso')
-    
+    if (Status === true) { ElementoCriado.setAttribute('class', 'Modal-Sucesso') }
+    if (Status === false) { ElementoCriado.setAttribute('class', 'Modal-Erro') }
 
-    ReferemciaDeCriacao.appendChild(ElementoCriado)
+    ElementoPaiDeReferencia.appendChild(ElementoCriado)
 
-    setTimeout(() => {
+    let Delay = TimerEntreModais(Status); 
+
+    let MostrarModal = setTimeout(() => {
         ElementoCriado.classList.add('Aparecer')
-    }, 0, clearInterval());
+        clearInterval(MostrarModal)
+    }, Delay);
 
-    setInterval(() => {
-        // console.log("Entrou aqui!!");
+    let RemoverModal = setInterval(() => {
         ElementoCriado.classList.remove('Aparecer')
         DeletarModal(ElementoCriado)
-        // ElementoCriado.classList.add('Sumir')
+        clearInterval(RemoverModal); 
     }, 5000);
 }
 
 function DeletarModal(ElementoCriado) {
-    setInterval(() => {
+    
+    let DeletarModal = setInterval(() => {
         ElementoCriado.remove();
-    }, 2000, clearInterval());
+        console.log("Deletou");
+        clearInterval(DeletarModal)
+    }, 2000);
     
 }
+
+function TimerEntreModais(Status) {
+    let Modais; 
+
+    if (Status === true) { Modais = document.querySelectorAll('.Modal-Sucesso') } 
+    if (Status === false ) { Modais = document.querySelectorAll('.Modal-Erro') }
+   
+    if (Modais.length > 1) {
+        return 5000
+    }
+    
+    return 0; 
+}
+
