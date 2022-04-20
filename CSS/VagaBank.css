@@ -311,11 +311,12 @@ body {
 .user .foto-De-Perfil{
     width: 80px;
     height: 80px;
-    background-image: url(../Imagens/user.png);
+    background-image: url(../Imagens/Foto\ de\ perfil.png);
     background-size: cover;
     margin-bottom: 15px;
     background-size: cover;
     border-radius: 50%;
+    outline: 4px solid hsl(181, 100%, 35%); 
 }
 
 .btn-exit {
