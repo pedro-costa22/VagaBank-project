@@ -286,6 +286,11 @@ body {
     grid-template-rows: 1fr 4fr;
 }
 
+.menu.active {
+    background-color: #282a36;
+    box-shadow: 0 0 10px rgb(13 12 12 / 15%);
+}
+
 .logo {
     display: flex;
     flex-direction: row;
@@ -299,7 +304,10 @@ body {
    padding: 20px;
    background-color: hsl(181, 100%, 44%);
    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
-   
+}
+
+.user.active {
+    background-color: #2f313f;
 }
 
 .user p {
@@ -447,6 +455,55 @@ body {
     }
 }
 
+.modo i {
+    color: #fff;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.modo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dark-mode {
+    text-align: center;
+    margin-right: 3px;
+}
+
+
+
+.btn-mode {
+    width: 40px;
+    height: 15px;
+    border: 2px solid #ccc;
+    background: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    padding: 1px;
+    transition: all .4s;
+    margin-left: 2.5rem;
+}
+
+.btn-mode::before{
+    content: "";
+    position: absolute;
+    background: hsl(181, 100%, 41%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: .4s;
+    
+}
+
+.btn-mode.active::before{
+    margin-left: 23.5px;
+    background: hsl(0, 0%, 22%);
+}
+
+
 /* FIM DA TELA HOME */
 
 /* INICIO TELA CONSULTA DE SALDO*/
@@ -566,6 +623,10 @@ body {
     width: 250px;
     margin: -15px 0;
     margin-bottom: 5px;
+}
+
+.detalhes.active {
+    display: flex;
 }
 
 .detalhes p {

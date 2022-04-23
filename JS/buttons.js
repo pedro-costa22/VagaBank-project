@@ -97,3 +97,16 @@ menuMobile.addEventListener("click", () =>{
     navbar.classList.toggle('mobileOpen');
     menuMobile.classList.toggle('fa-times')
 })
+
+
+// Dark mode
+
+const btnMode = document.querySelector(".btn-mode");
+let menu = document.querySelector(".menu");
+let user = document.querySelector(".user");
+
+btnMode.addEventListener("click", () =>{
+    btnMode.classList.toggle("active")
+    menu.classList.toggle("active")
+    user.classList.toggle("active")
+})
