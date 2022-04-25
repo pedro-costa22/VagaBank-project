@@ -4,7 +4,7 @@
 </div>
  
                                                           
-        Já imaginou acessar um caixa eletrônico virtualmente? Conhea o Vaga Bank!
+        Já imaginou acessar um caixa eletrônico virtualmente? Conheça o Vaga Bank!
       
       
 <div> 
