@@ -59,7 +59,7 @@ A proposta visa tornar a aplicação digital similiar com um caixa eletronico co
 
   
 <div>
-  <p> <b>developed by </b></p>
+  <p><b>developed by </b></p>
   <p>Pedro H. Costa </p>
   <a href="https://github.com/pedro-costa22" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"    target="_blank"></a>
   
